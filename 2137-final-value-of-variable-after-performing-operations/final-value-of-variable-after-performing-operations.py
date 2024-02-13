@@ -1,12 +1,11 @@
-class Solution:
-    def finalValueAfterOperations(self, operations: List[str]) -> int:
-        a=0
-        for i in range(len(operations)):
-            if operations[i]=='++X' or operations[i]=='X++':
-                a+=1
-            elif operations[i]=='--X' or operations[i]=='X--':
-                a-=1
-        
-        return a
+class Solution(object):
+    def finalValueAfterOperations(self, operations):
+        count = 0
+        for i in operations:
+            if i == "X++" or i == "++X":
+                count = count + 1
+            elif i == "X--" or i == "--X":
+                count = count - 1
 
-    
+        return count
+        
