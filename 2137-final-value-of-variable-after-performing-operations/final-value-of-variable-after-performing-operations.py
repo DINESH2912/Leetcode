@@ -1,11 +1,15 @@
 class Solution(object):
     def finalValueAfterOperations(self, operations):
-        count = 0
-        for i in operations:
-            if i == "X++" or i == "++X":
-                count = count + 1
-            elif i == "X--" or i == "--X":
-                count = count - 1
+        a=[]
+        for i in range(0,len(operations)):
+            if "--X" in operations[i]:
+                a.append(-1)
+            if "X--" in operations[i]:
+                a.append(-1)
+            if "X++" in operations[i]:
+                a.append(1)
+            if "++X" in operations[i]:
+                a.append(1)
+        return sum(a)
 
-        return count
         
