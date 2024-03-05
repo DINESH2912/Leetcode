@@ -1,5 +1,5 @@
-class Solution:
-    def findWordsContaining(self, words: List[str], x: str) -> List[int]:
+class Solution(object):
+    def findWordsContaining(self, words, x):
         b=[]
         for i in range(len(words)):
             if x in words[i]:
@@ -7,7 +7,4 @@ class Solution:
             else:
                 pass
         return b
-            
-
-
         
